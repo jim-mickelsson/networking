@@ -11,7 +11,6 @@ no service password-encryption
 !
 hostname Core-R1
 !
-!
 ip dhcp excluded-address 10.0.10.1
 ip dhcp excluded-address 10.0.20.1
 ip dhcp excluded-address 10.0.99.1
