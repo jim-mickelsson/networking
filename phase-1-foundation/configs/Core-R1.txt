@@ -1,0 +1,70 @@
+! ------------------------------------------------------------------
+! DEVICE: Core-R1
+! ROLE:   Phase 1 Core Router (RoAS, DHCP)
+! LAB:    Enterprise Network Evolution
+! ------------------------------------------------------------------
+
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Core-R1
+!
+!
+ip dhcp excluded-address 10.0.10.1
+ip dhcp excluded-address 10.0.20.1
+ip dhcp excluded-address 10.0.99.1
+!
+ip dhcp pool SALES_POOL
+ network 10.0.10.0 255.255.255.0
+ default-router 10.0.10.1
+ dns-server 8.8.8.8
+!
+ip dhcp pool ENG_POOL
+ network 10.0.20.0 255.255.255.0
+ default-router 10.0.20.1
+ dns-server 8.8.8.8
+!
+ip cef
+no ipv6 cef
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1.10
+ description Gateway for Sales
+ encapsulation dot1Q 10
+ ip address 10.0.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0/1.20
+ description Gateway for Engineering
+ encapsulation dot1Q 20
+ ip address 10.0.20.1 255.255.255.0
+!
+interface GigabitEthernet0/0/1.99
+ description Native VLAN MGT
+ encapsulation dot1Q 99 native
+ ip address 10.0.99.1 255.255.255.0
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip flow-export version 9
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+!
+end
