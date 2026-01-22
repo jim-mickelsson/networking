@@ -1,0 +1,38 @@
+! ------------------------------------------------------------------
+! DEVICE: Branch-SW1
+! ROLE:   Branch Access Switch
+! LAB:    Phase 2 - WAN Expansion
+! ------------------------------------------------------------------
+
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Branch-SW1
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/6
+ switchport access vlan 30
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ switchport access vlan 30
+ switchport mode access
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+line con 0
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end
