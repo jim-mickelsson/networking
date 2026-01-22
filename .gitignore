@@ -1,7 +1,6 @@
 # Packet Tracer Autosaves & Logs
 *.bak
 *.log
-*.pka
 *.cache
 
 # OS Generated Files
