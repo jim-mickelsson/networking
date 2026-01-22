@@ -1,5 +1,5 @@
 # Enterprise Network Evolution Project
-![Status](https://img.shields.io/badge/Status-Planning_Phase-yellow)
+![Status](https://img.shields.io/badge/Status-In_Progress-blue)
 
 ## Project Overview
 This repository documents my ongoing study of enterprise network architecture. Over the coming weeks, I will be building a multi-site network simulation in Cisco Packet Tracer, moving from basic switching to advanced security.
@@ -8,13 +8,13 @@ This repository documents my ongoing study of enterprise network architecture. O
 I am following an iterative approach to simulate real-world network growth.
 
 - [x] **Phase 1: The Foundation**
-  - [ ] VLAN Segmentation & Trunks
-  - [ ] Router-on-a-Stick
-  - [ ] DHCP Services
+  - [x] VLAN Segmentation & Trunks
+  - [x] Router-on-a-Stick
+  - [x] DHCP Services
   
-- [ ] **Phase 2: WAN Expansion**
-  - [ ] OSPF Implementation
-  - [ ] Branch Office Connectivity
+- [x] **Phase 2: WAN Expansion**
+  - [x] OSPF Implementation
+  - [x] Branch Office Connectivity
   
 - [ ] **Phase 3: Security & Optimization**
   - [ ] NAT/PAT
