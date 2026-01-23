@@ -38,9 +38,6 @@ I am following an iterative approach to simulate real-world network growth.
 ## Learning Resources & Methodology
 This project serves as a practical application of concepts I am actively studying. My workflow involves integrating insights from the following sources to solve architectural challenges:
 
-## Learning Resources & Methodology
-This project serves as a practical application of concepts I am actively studying. My workflow involves integrating insights from the following sources to solve architectural challenges:
-
 ### Academic Coursework
 
 * **Network Technology (Nätverksteknik):** Core module of the *IT Security Engineer* program at Yrkeshögskolan i Enköping.
